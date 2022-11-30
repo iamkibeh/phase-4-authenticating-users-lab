@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-        session.data[:user_id].delete 
+        session.delete :user_id
         render json:{}, status: :no_content
     end
 end
